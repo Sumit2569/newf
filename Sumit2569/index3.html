@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 302px;
+            height: 421px;
+            border: 2px solid #000;
+            background: #000;
+            transition: all 1s;
+            clip-path: polygon(1% 2%, 100% 0, 100% 100%, 0 96%);            
+
+        }
+        .box1:hover{
+            clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
+            
+        }
+        img{
+            clip-path: polygon(1% 2%, 100% 0, 100% 100%, 0 96%);            
+            transition: all 1s;
+        }
+        img:hover{
+            clip-path: polygon(0 0, 100% 3%, 100% 96%, 0% 100%);
+
+        }
+
+    </style>
+</head>
+<body>
+        <div class="box1">
+                <img src="image/img1.jpg">
+        </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+    .col-md-6 img{
+        overflow: hidden;
+        position: relative;
+    }
+    #sun{
+        width: 300px;
+        height:420px;
+        background: grey;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        transition: width 2s;
+    }
+    .cde{
+        width:350px;
+    }
+    img:hover #sun{
+        width:350px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-5">
+                <img class="test-img" src="image/img1.jpg" style="z-index: 2;position: relative;" alt="">
+                <div class="sui" id="sun"></div>
+            </div>
+            <div class="col-md-6 mt-5">
+                <img src="image/img2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".test-img").hover(function(){
+            $(this).parent().removeClass("col-md-6").addClass("col-lg-12");
+          });
+          $(".test-img").hover(function(){
+            $(this).parent().removeClass("sui").addClass("cde");
+          });
+        
+        $(".test-img").on('mouseleave', function(e){
+            $(this).parent().removeClass("col-lg-12").addClass("col-md-6");
+          });
+        
+        });
+        </script>
+</body>
+</html>
